@@ -1,0 +1,18 @@
+git clone <URL>             -   download a repository
+git add <filename>          -   track a file for next commit
+git commit -m "message"     -   save a snapshot of current state of repository
+git status
+git push                    -   Push commits to server (remote repository)
+git commit -am "message"    -   Git commit all files that have been changed (combine add and commit steps)
+git pull                    -   download latest version of repository
+
+git log                     -   History of commits
+git reset                   -   Revert back to previous commit 
+    git reset --hard <commit>   -   commit is commit hash
+    git reset --hard origin/master  -   Reset current version of repository to remote
+
+-- Branching --
+git branch                  -   What branches exist and * for which you currently on
+git checkout -b <new branch> -   Create new branch
+git checkout <branch>       -   Switch to an already existing branch
+git merge <branch>          -   Merge from <branch> into current branch
