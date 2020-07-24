@@ -9,7 +9,14 @@ if [ $# -eq 0 ]; then
 
 ### if only 1 argument, deploy that file with its current name
 elif [ $# -eq 1 ]; then
-    DEPLOY_FILE=$1
+
+    ### -p - purge option.  Delete everything below /var/www/html/
+    if [ $1 == "-p" ]; then
+        rm -rf /var/www/html/*
+        exit 0
+    else
+        DEPLOY_FILE=$1
+    fi
 
 ### If 2 arguments, deploy file with name supplied as second argument
 elif [ $# -eq 2 ]; then

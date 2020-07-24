@@ -1,0 +1,42 @@
+#main-form {
+    text-align: center;
+}
+
+#main-title {
+    margin-top: 120px;
+    margin-bottom: 40px;
+    font-size: 80px;
+}
+
+#search-input {
+    margin-bottom: 20px;
+    height:50px;
+    width: 800px;
+    font-size:14pt;
+    border-radius: 40px;
+    border-width: 1px;
+    border-color: lightgray;
+    outline: none;
+    padding: 15px;
+}
+
+#advanced-page {
+    margin: 40px;
+}
+
+#advanced-title {
+    color: red;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+#advanced-subtitle {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#advanced-button {
+    float: right;
+}
