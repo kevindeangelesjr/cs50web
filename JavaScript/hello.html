@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello</title>
+        <script>
+
+            // create a javascript function
+            /*
+            function hello(){
+                alert('Hello, world!');
+            }
+            */
+
+            /*
+            function hello(){
+                document.querySelector('h1').innerHTML = 'Goodbye';     
+            }
+            */
+
+            function hello(){
+                // Constant, cannot be changed
+                const heading = document.querySelector('h1');
+                if (heading.innerHTML === 'Hello!'){
+                    heading.innerHTML = 'Goodbye!';
+                } else {
+                    heading.innerHTML = 'Hello!';
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function(){
+
+                document.querySelector('form').onsubmit = function(){
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello, ${name}!`);
+                };
+
+            })
+
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <!-- Add onclick handler (what to do when button is clicked).  Setting it to run the javascript function -->
+        <!--<button onclick="hello()">Click Here</button>-->
+
+        <form>
+            <input autofocus id="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
+
+    </body>
+</html>
