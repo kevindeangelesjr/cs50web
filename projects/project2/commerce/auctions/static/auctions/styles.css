@@ -1,0 +1,19 @@
+body {
+    padding: 10px;
+}
+
+#bid-box {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+#comment-box {
+    margin-bottom: 10px;
+}
+
+.comment {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+}

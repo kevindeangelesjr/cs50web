@@ -1,0 +1,12 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="jumbotron">
+    <h1>Browse by Category</h1>
+    {% for category in categories %}
+        <a href="{%url 'by_category' category.category_name %}">
+        <p class="lead">{{ category.category_name }}</p>
+        </a>
+    {% endfor %}
+</div>
+{% endblock %}

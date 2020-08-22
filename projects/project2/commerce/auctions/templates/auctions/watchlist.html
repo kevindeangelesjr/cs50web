@@ -1,0 +1,20 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron">
+    <h1>Watchlist for {{ user.username }}</h1>
+    {% for listing in listings %}
+        <a href="{%url 'listing' listing.id %}"><p>{{ listing.title }}</p></a>
+        <ul>
+            <li>Current Price {{ listing.price }}</li>
+        </ul>
+        <form action="{% url 'remove_watchlist' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="listing_id" value="{{ listing.id }}">
+            <input type="submit" class="btn btn-primary btn-sm" value="Remove From Watchlist">
+        </form>
+        <br>
+{% endfor %}
+
+{% endblock %}

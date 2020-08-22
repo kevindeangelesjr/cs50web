@@ -1,0 +1,19 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+
+    {% for listing in active_listings %}
+        <div class="jumbotron">
+            <a href="{%url 'listing' listing.id %}">
+            <h1>{{ listing.title }}</h1>
+            </a>
+            <p class="lead">{{ listing.description }}</p>
+            <hr class="my-4">
+            <p>Current Price: {{ listing.price }}</p>
+            {% if listing.picture %}
+                <img src="{{ listing.picture }}" alt="Listing Picture" width="300">
+            {% endif %}
+          </div>
+    {% endfor %}
+{% endblock %}

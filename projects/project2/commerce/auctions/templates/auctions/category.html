@@ -1,0 +1,12 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="jumbotron">
+  <h1>Listings for {{ category }}</h1>
+  {% for listing in listings %}
+      <a href="{% url 'listing' listing.id %}">
+      <p class="lead">{{ listing.title }}</p>
+      </a>
+  {% endfor %}
+</div>
+{% endblock %}
