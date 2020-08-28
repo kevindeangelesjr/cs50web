@@ -1,0 +1,42 @@
+textarea {
+    min-height: 400px;
+}
+
+#compose-submit {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.read-email {
+    background-color: lightgray;
+    margin: 15px;
+    padding: 20px;
+    border-style: groove;
+    border-radius: 15px;
+    border-color: black;
+}
+
+.unread-email {
+    background-color: white;
+    margin: 15px;
+    padding: 20px;
+    border-style: groove;
+    border-radius: 15px;
+    border-color: black;
+}
+
+.email {
+    background-color: lightgray;
+    margin: 15px;
+    padding: 20px;
+}
+
+.email-body {
+    background-color: white;
+    margin: 15px;
+    padding: 20px;
+}
+
+.email-button {
+    margin: 5px;
+}
