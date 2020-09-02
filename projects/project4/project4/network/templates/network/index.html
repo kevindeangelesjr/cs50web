@@ -1,5 +1,19 @@
 {% extends "network/layout.html" %}
 
+{% block script %}
+    <script src='static/network/newpost.js'></script>
+{% endblock %}
+
 {% block body %}
-    TODO
+    <div class="main-page">
+        <h1 class="page-title">All Posts</h1>
+        <div>
+            <button id="new-post-btn" type="button" class="btn pink-btn">+ New Post</button>
+        </div>
+        <div>
+            <textarea id="new-post" placeholder="New Post ..."></textarea>
+        </div>
+        <div id="post-view">
+        </div>
+    </div>
 {% endblock %}
