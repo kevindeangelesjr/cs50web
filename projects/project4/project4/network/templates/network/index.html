@@ -10,8 +10,13 @@
         <div>
             <button id="new-post-btn" type="button" class="btn pink-btn">+ New Post</button>
         </div>
-        <div>
-            <textarea id="new-post" placeholder="New Post ..."></textarea>
+        <div id="new-post">
+            <textarea id="new-post-box" name="new-post-box" placeholder="New Post ..."></textarea>
+            <form>
+                {% csrf_token %}
+                <button id="new-post-confirm" type="button" class="btn pink-btn">Post</button>
+            </form>
+            <button id="new-post-cancel" type="button" class="btn pink-btn">Cancel</button>
         </div>
         <div id="post-view">
         </div>
